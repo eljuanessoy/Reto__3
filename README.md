@@ -242,9 +242,9 @@ class Ensalada(MenuItem):
         self.vinagreta = vinagreta
 
 class Fuerte(MenuItem):
-    def __init__(self, nombre, precio, impuesto, propina, tipo_pasta):
+    def __init__(self, nombre, precio, impuesto, propina, tipo):
         super().__init__(nombre, precio, impuesto, propina)
-        self.tipo_pasta = tipo_pasta
+        self.tipo = tipo
 
 class Order:
     def __init__(self):
@@ -288,8 +288,8 @@ postre3 = Postre("Gelato al Pistacchio", 40000, 0.7, 0.10, "Gelatina")
 postre4 = Postre("Afogatto", 26000, 0.7, 0.10, "Helado")
 
 bebida1 = Bebida("Bubble Fizz", 50000, 0.7, 0.10, "Licor")
-bebida2 = Bebida("Gassata de Frutos Verdes", 18900, 0.7, 0.10, 'Refresco')
-bebida3 = Bebida("Capuccino", 10000, 0.7, 0.10, "Bebida caliente")
+bebida2 = Bebida("Capuccino", 10000, 0.7, 0.10, "Bebida caliente")
+bebida3 = Bebida("Gassata de Frutos Verdes", 18900, 0.7, 0.10, 'Refresco')
 bebida4 = Bebida("Limonada de Mango Biche", 16500, 0.7, 0.10, "Limonada")
 bebida5 = Bebida("Jugo de Mora", 10000, 0.7, 0.10, "Jugo")
 
@@ -299,7 +299,7 @@ ensalada2 = Ensalada("Vero Amore", 51000, 0.7, 0.10, "Vinagreta tradicional")
 
 
 orden1 = Order()
-orden1.agregarItem(entrada1)
+orden1.agregarItem(ensalada2)
 orden1.agregarItem(fuerte3)
 orden1.agregarItem(postre3)
 orden1.agregarItem(bebida4)
@@ -311,10 +311,10 @@ orden2.agregarItem(postre1)
 orden2.agregarItem(bebida3)
 
 orden3 = Order()
-orden3.agregarItem(ensalada2)
-orden3.agregarItem(fuerte2)
-orden3.agregarItem(postre2)
-orden3.agregarItem(bebida2)
+orden3.agregarItem(entrada1)
+orden3.agregarItem(fuerte1)
+orden3.agregarItem(postre4)
+orden3.agregarItem(bebida3)
 
 
 orden = int(input("Ingrese una orden, 1, 2, 3: "))
